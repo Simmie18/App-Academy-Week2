@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HULK | STRONGEST AVENGER</title>
+    <style>
+    
+      body {
+        background: linear-gradient(135deg, #0a380a, #1a5a1a, #093809);
+        font-family: "Arial", sans-serif;
+        color: #fff;
+        margin: 0;
+        padding: 20px;
+        min-height: 100vh;
+        text-align: center;
+      }
+
+      
+      h2 {
+        font-size: 4.5rem;
+        margin: 20px 0;
+        color: #00ff00;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+        position: relative;
+        animation: smashPulse 1.5s infinite alternate;
+      }
+
+      @keyframes smashPulse {
+        0% {
+          transform: scale(1);
+          text-shadow: 0 0 10px #00ff00;
+        }
+        50% {
+          transform: scale(1.05);
+          text-shadow: 0 0 20px #00ff00, 0 0 40px #7cfc00;
+        }
+        100% {
+          transform: scale(1.1);
+          text-shadow: 0 0 30px #00ff00, 0 0 60px #7cfc00;
+        }
+      }
+
+      .gallery {
+        max-width: 300px;
+        margin: 30px auto;
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 255, 0, 0.3);
+        transition: all 0.3s ease;
+        transform: rotate(-1deg);
+        border: 4px solid #3a3a3a;
+        position: relative;
+      }
+
+      .gallery:hover {
+        transform: scale(1.05) rotate(1deg);
+        box-shadow: 0 15px 40px rgba(0, 255, 0, 0.6);
+      }
+
+      .gallery::before {
+        content: "SMASH!";
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        background: #ff0000;
+        color: white;
+        font-weight: bold;
+        padding: 5px 10px;
+        border-radius: 50%;
+        transform: rotate(15deg);
+        z-index: 10;
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+      }
+
+      .gallery img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.3s ease;
+      }
+
+      .gallery:hover img {
+        transform: scale(1.1);
+      }
+
+      
+      h4 {
+        font-size: 2rem;
+        color: #00ff00;
+        margin: 30px 0 15px;
+        position: relative;
+        display: inline-block;
+        text-shadow: 2px 2px 0 #3a3a3a;
+      }
+
+      h4::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        bottom: -5px;
+        left: 0;
+        background: linear-gradient(90deg, #00ff00, #ff0000);
+      }
+
+     
+      p {
+        margin: 15px auto;
+        max-width: 500px;
+        text-align: left;
+        padding: 10px 20px;
+        background: rgba(58, 58, 58, 0.7);
+        border-radius: 0 10px 10px 0;
+        position: relative;
+        overflow: hidden;
+        border-left: 5px solid #00ff00;
+        box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
+      }
+
+      p b {
+        display: inline-block;
+        width: 150px;
+        color: #00ff00;
+        font-size: 1.1em;
+      }
+
+     
+      p:contains("100%") {
+        background: rgba(0, 255, 0, 0.1);
+        border-left: 5px solid #ff0000;
+        animation: gammaGlow 2s infinite alternate;
+      }
+
+      @keyframes gammaGlow {
+        from {
+          box-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
+        }
+        to {
+          box-shadow: 0 0 15px rgba(0, 255, 0, 0.7);
+        }
+      }
+
+   
+      p:contains("(Banner)") b {
+        color: #add8e6;
+      }
+      p:contains("(Hulk)") b {
+        color: #ff0000;
+      }
+
+      
+      @media (max-width: 600px) {
+        h2 {
+          font-size: 2.8rem;
+        }
+        .gallery {
+          max-width: 250px;
+        }
+        p {
+          max-width: 90%;
+        }
+        p b {
+          width: 120px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>HULK</h2>
+    <div class="gallery">
+      <a href="index.html"> 
+        <img src="images/avengers_03.jpg" alt="Hulk - Green Goliath">
+    </div>
+
+    <h4>Bio</h4>
+    <p><b>Name:</b> Bruce Banner / Hulk</p>
+    <p><b>Place Of Birth:</b> Dayton, Ohio</p>
+    <p><b>Alignment:</b> Good (unpredictable)</p>
+    <p><b>Gender:</b> Male</p>
+    <p><b>Race:</b> Mutated Human</p>
+
+    <br />
+
+    <h4>Power Stats</h4>
+    <p><b>Intelligence:</b> 95% (Banner), 40% (Hulk)</p>
+    <p><b>Strength:</b> 100% (limitless when angry)</p>
+    <p><b>Speed:</b> 75% (bursts/leaping)</p>
+    <p><b>Durability:</b> 100% (near-invulnerable)</p>
+    <p><b>Power:</b> 100% (gamma energy)</p>
+    <p><b>Combat:</b> 85% (raw power > skill)</p>
+  </body>
+</html>

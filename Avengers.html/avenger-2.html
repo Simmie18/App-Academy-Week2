@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iron Man | Genius, Billionaire, Playboy, Philanthropist</title>
+    <style>
+             body {
+            background: linear-gradient(135deg, #000000, #0a0a20, #1a1a2e);
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        
+        h2 {
+            font-size: 3.5rem;
+            margin: 20px 0;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff;
+            position: relative;
+            animation: arcPulse 2s infinite alternate;
+        }
+
+        @keyframes arcPulse {
+            0% { text-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff; }
+            100% { text-shadow: 0 0 15px #00f7ff, 0 0 30px #00f7ff, 0 0 45px #ffffff; }
+        }
+
+    
+        .gallery {
+            max-width: 300px;
+            margin: 20px auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 247, 255, 0.3);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 3px solid rgba(0, 247, 255, 0.5);
+            position: relative;
+        }
+
+        .gallery::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #00f7ff, #ff0000, #00f7ff);
+            z-index: -1;
+            border-radius: 16px;
+            background-size: 200% 200%;
+            animation: borderGlow 3s linear infinite;
+        }
+
+        @keyframes borderGlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .gallery:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 247, 255, 0.6);
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s;
+        }
+
+        .gallery:hover img {
+            transform: scale(1.1);
+        }
+
+      
+        h4 {
+            font-size: 1.8rem;
+            color: #00f7ff;
+            margin: 25px 0 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        h4::before {
+            content: '[ ';
+            color: #ff0000;
+        }
+
+        h4::after {
+            content: ' ]';
+            color: #ff0000;
+        }
+
+        p {
+            margin: 10px auto;
+            max-width: 500px;
+            text-align: left;
+            padding: 8px 20px;
+            background: rgba(10, 10, 32, 0.7);
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+            border-left: 3px solid #00f7ff;
+            font-family: 'Courier New', monospace;
+        }
+
+        p b {
+            display: inline-block;
+            width: 120px;
+            color: #ff0000;
+        }
+
+    
+        p::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(0, 247, 255, 0.1), transparent);
+            z-index: -1;
+        }
+
+        p:contains("100%") {
+            background: rgba(0, 247, 255, 0.1);
+            box-shadow: 0 0 10px rgba(0, 247, 255, 0.3);
+            animation: intelPulse 2s infinite alternate;
+        }
+
+        @keyframes intelPulse {
+            from { box-shadow: 0 0 10px rgba(0, 247, 255, 0.3); }
+            to { box-shadow: 0 0 20px rgba(0, 247, 255, 0.6); }
+        }
+
+    
+        p:contains("(with armor)")::before,
+        p:contains("(armor-enhanced)")::before,
+        p:contains("(tech/energy weapons)")::before {
+            content: '◉';
+            color: #00f7ff;
+            margin-right: 8px;
+            font-size: 0.8rem;
+        }
+
+     
+        @media (max-width: 600px) {
+            h2 { font-size: 2.5rem; }
+            .gallery { max-width: 250px; }
+            p { max-width: 90%; }
+        }
+    </style>
+</head>
+<body>
+    <h2>Iron Man</h2>
+    <div class="gallery">
+        <a href="index.html">
+            <img src="images/avengers_02.jpg" alt="Iron Man - Mark VII Armor">
+    </div>
+    
+    <h4>Bio</h4>
+    <p><b>Name:</b> Tony Stark</p>
+    <p><b>Place Of Birth:</b> Manhattan, New York</p>
+    <p><b>Alignment:</b> Good</p>
+    <p><b>Gender:</b> Male</p>
+    <p><b>Race:</b> Human</p>
+    
+    <br />
+    
+    <h4>Power Stats</h4>
+    <p><b>Intelligence:</b> 100%</p>
+    <p><b>Strength:</b> 85% (with armor)</p>
+    <p><b>Speed:</b> 88% (flight/reaction time)</p>
+    <p><b>Durability:</b> 90% (armor-enhanced)</p>
+    <p><b>Power:</b> 94% (tech/energy weapons)</p>
+    <p><b>Combat:</b> 82%</p>
+</body>
+</html>

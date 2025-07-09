@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thor | God of Thunder</title>
+    <style>
+      body {
+        background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+        font-family: "Arial", sans-serif;
+        color: #fff;
+        margin: 0;
+        padding: 20px;
+        min-height: 100vh;
+        text-align: center;
+      }
+
+      h2 {
+        font-size: 3.5rem;
+        margin: 20px 0;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        text-shadow: 0 0 10px #4facfe, 0 0 20px #4facfe;
+        position: relative;
+        animation: lightning 3s infinite alternate;
+      }
+
+      @keyframes lightning {
+        0% {
+          text-shadow: 0 0 10px #4facfe, 0 0 20px #4facfe;
+        }
+        100% {
+          text-shadow: 0 0 15px #4facfe, 0 0 30px #4facfe, 0 0 45px #00f7ff;
+        }
+      }
+
+      .gallery {
+        max-width: 300px;
+        margin: 20px auto;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(79, 172, 254, 0.5);
+        transition: transform 0.5s, box-shadow 0.5s;
+        border: 3px solid rgba(255, 215, 0, 0.3);
+      }
+
+      .gallery:hover {
+        transform: scale(1.05);
+        box-shadow: 0 15px 40px rgba(79, 172, 254, 0.8);
+      }
+
+      .gallery img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.5s;
+      }
+
+      .gallery:hover img {
+        transform: scale(1.1);
+      }
+
+      h4 {
+        font-size: 1.8rem;
+        color: #4facfe;
+        margin: 25px 0 15px;
+        position: relative;
+        display: inline-block;
+      }
+
+      h4::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        bottom: -5px;
+        left: 0;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          #4facfe,
+          #00f7ff,
+          transparent
+        );
+      }
+
+      p {
+        margin: 10px auto;
+        max-width: 500px;
+        text-align: left;
+        padding: 8px 20px;
+        background: rgba(15, 52, 96, 0.5);
+        border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      p b {
+        display: inline-block;
+        width: 120px;
+        color: #ffd700;
+      }
+
+      p::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          rgba(79, 172, 254, 0.3),
+          transparent
+        );
+        z-index: -1;
+        animation: powerGlow 2s infinite alternate;
+      }
+
+      @keyframes powerGlow {
+        from {
+          width: 0;
+          opacity: 0;
+        }
+        to {
+          width: 100%;
+          opacity: 0.5;
+        }
+      }
+
+      p:contains("100%") {
+        background: rgba(79, 172, 254, 0.2);
+        box-shadow: 0 0 15px rgba(79, 172, 254, 0.5);
+      }
+
+      p:contains("100%")::after {
+        background: linear-gradient(
+          90deg,
+          rgba(79, 172, 254, 0.5),
+          rgba(0, 247, 255, 0.3)
+        );
+        animation: maxPower 1.5s infinite alternate;
+      }
+
+      @keyframes maxPower {
+        from {
+          width: 0;
+          opacity: 0;
+        }
+        to {
+          width: 100%;
+          opacity: 0.7;
+        }
+      }
+
+      @media (max-width: 600px) {
+        h2 {
+          font-size: 2.5rem;
+        }
+        .gallery {
+          max-width: 250px;
+        }
+        p {
+          max-width: 90%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Thor</h2>
+    <div class="gallery">
+      <a href="index.html">
+        <img src="images/avengers_01.jpg" alt="Avenger 1"> 
+      </a>
+    </div>
+
+    <h4>Bio</h4>
+    <p><b>Name:</b> Thor Odinson</p>
+    <p><b>Place Of Birth:</b> Asgard</p>
+    <p><b>Alignment:</b> Good</p>
+    <p><b>Gender:</b> Male</p>
+    <p><b>Race:</b> Asgardian</p>
+
+    <br />
+
+    <h4>Power Stats</h4>
+    <p><b>Intelligence:</b> 69%</p>
+    <p><b>Strength:</b> 100%</p>
+    <p><b>Speed:</b> 92%</p>
+    <p><b>Durability:</b> 100%</p>
+    <p><b>Power:</b> 100%</p>
+    <p><b>Combat:</b> 85%</p>
+  </body>
+</html>

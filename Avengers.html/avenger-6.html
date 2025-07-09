@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLACK WIDOW | MASTER SPY</title>
+    <style>
+       
+        body {
+            background: linear-gradient(135deg, #0a0a0a, #1a1a1a, #2a2a2a);
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            text-align: center;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(255,0,0,0.1) 0%, transparent 20%),
+                radial-gradient(circle at 80% 70%, rgba(255,0,0,0.1) 0%, transparent 20%);
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        
+        h2 {
+            font-size: 3.5rem;
+            margin: 20px 0;
+            color: #ff0033;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            position: relative;
+            text-shadow: 0 0 10px rgba(255, 0, 51, 0.5);
+            animation: bitePulse 2s infinite alternate;
+        }
+
+        @keyframes bitePulse {
+            from { text-shadow: 0 0 10px rgba(255, 0, 51, 0.5); }
+            to { text-shadow: 0 0 20px rgba(255, 0, 51, 0.8); }
+        }
+
+        h2::after {
+            content: '❖❖❖';
+            color: #ff0033;
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1rem;
+            letter-spacing: 5px;
+        }
+
+        .gallery {
+            max-width: 300px;
+            margin: 30px auto;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(255, 0, 51, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            border: 1px solid #ff0033;
+        }
+
+        .gallery:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(255, 0, 51, 0.6);
+        }
+
+        .gallery::before {
+            content: 'CLASSIFIED';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.7);
+            color: #ff0033;
+            font-size: 0.8rem;
+            padding: 3px 6px;
+            border-radius: 3px;
+            border: 1px solid #ff0033;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+            filter: grayscale(30%);
+        }
+
+        .gallery:hover img {
+            transform: scale(1.1);
+            filter: grayscale(0%);
+        }
+
+        
+        h4 {
+            font-size: 1.8rem;
+            color: #ff0033;
+            margin: 25px 0 15px;
+            position: relative;
+            display: inline-block;
+            padding: 0 25px;
+        }
+
+        h4::before, h4::after {
+            content: '—';
+            color: #ff0033;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        h4::before {
+            left: 0;
+        }
+
+        h4::after {
+            right: 0;
+        }
+
+        
+        p {
+            margin: 12px auto;
+            max-width: 500px;
+            text-align: left;
+            padding: 10px 20px;
+            background: rgba(30, 30, 30, 0.7);
+            border-radius: 3px;
+            position: relative;
+            border-left: 3px solid #ff0033;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        p b {
+            display: inline-block;
+            width: 150px;
+            color: #ff0033;
+        }
+
+       
+        p:contains("95%") {
+            background: rgba(255, 0, 51, 0.1);
+            border-left: 3px solid #fff;
+            animation: combatPulse 2s infinite alternate;
+        }
+
+        @keyframes combatPulse {
+            from { box-shadow: 0 0 5px rgba(255, 0, 51, 0.3); }
+            to { box-shadow: 0 0 15px rgba(255, 0, 51, 0.5); }
+        }
+
+      
+        p:contains("(elite-athlete)")::before,
+        p:contains("(acrobatic agility)")::before,
+        p:contains("(hand-to-hand specialist)")::before {
+            content: '⚔️';
+            margin-right: 8px;
+        }
+
+      
+        @media (max-width: 600px) {
+            h2 { font-size: 2.5rem; }
+            .gallery { max-width: 250px; }
+            p { max-width: 90%; }
+            p b { width: 120px; }
+        }
+    </style>
+</head>
+<body>
+    <h2>Black Widow</h2>
+    <div class="gallery">
+        <a href="index.html">
+            <img src="images/avengers_06.jpg" alt="Black Widow - Master Spy">
+    </div>
+    
+    <h4>Bio</h4>
+    <p><b>Name:</b> Natasha Romanoff</p>
+    <p><b>Place Of Birth:</b> Stalingrad, USSR</p>
+    <p><b>Alignment:</b> Good</p>
+    <p><b>Gender:</b> Female</p>
+    <p><b>Race:</b> Human (augmented)</p>
+    
+    <br />
+    
+    <h4>Power Stats</h4>
+    <p><b>Intelligence:</b> 88%</p>
+    <p><b>Strength:</b> 65% (elite-athlete)</p>
+    <p><b>Speed:</b> 80% (acrobatic agility)</p>
+    <p><b>Durability:</b> 70% (high endurance)</p>
+    <p><b>Power:</b> 60% (espionage/tech)</p>
+    <p><b>Combat:</b> 95% (hand-to-hand specialist)</p>
+</body>
+</html>

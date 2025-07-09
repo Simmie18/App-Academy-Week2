@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Marvel Avengers Gallery</title>
+    <style>
+      body {
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        color: white;
+        min-height: 100vh;
+      }
+
+      #menu-bar {
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(10px);
+        padding: 15px 0;
+        text-align: center;
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      #menu-bar a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 25px;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        position: relative;
+        transition: all 0.3s ease;
+      }
+
+      #menu-bar a:hover {
+        color: #00ffff;
+        text-shadow: 0 0 10px #00ffff;
+      }
+
+      #menu-bar a::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        background: linear-gradient(90deg, #00ffff, #0088ff);
+        transition: width 0.3s ease;
+      }
+
+      #menu-bar a:hover::after {
+        width: 100%;
+      }
+
+      .contact-container {
+        max-width: 800px;
+        margin: 50px auto;
+        padding: 30px;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 15px;
+        box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+        backdrop-filter: blur(5px);
+      }
+
+      h1 {
+        text-align: center;
+        color: #00ffff;
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+      }
+
+      .contact-methods {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      .contact-card {
+        background: rgba(15, 32, 39, 0.7);
+        padding: 25px;
+        border-radius: 10px;
+        border-left: 3px solid #00ffff;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .contact-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+      }
+
+      .contact-card h2 {
+        color: #00ffff;
+        margin-top: 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .contact-card h2 i {
+        font-size: 1.5em;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid #0088ff;
+        border-radius: 5px;
+        color: white;
+        font-family: inherit;
+      }
+
+      .contact-form textarea {
+        min-height: 150px;
+        resize: vertical;
+      }
+
+      .submit-btn {
+        background: linear-gradient(90deg, #00ffff, #0088ff);
+        color: #0f2027;
+        border: none;
+        padding: 12px 25px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .submit-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 255, 255, 0.5);
+      }
+
+      .social-links {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+      .social-links a {
+        color: white;
+        font-size: 1.5rem;
+        transition: all 0.3s ease;
+      }
+
+      .social-links a:hover {
+        color: #00ffff;
+        transform: translateY(-3px);
+      }
+
+      @media (max-width: 768px) {
+        #menu-bar a {
+          margin: 0 10px;
+          font-size: 14px;
+        }
+        
+        .contact-container {
+          margin: 20px;
+          padding: 20px;
+        }
+        
+        h1 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  </head>
+  <body>
+    <div id="menu-bar">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    
+    <div class="contact-container">
+      <h1>Assemble With Us</h1>
+      <p style="text-align: center;">Have questions, suggestions, or want to report an issue with our gallery? Use any of the methods below to reach our team.</p>
+      
+      <div class="contact-methods">
+        <div class="contact-card">
+          <h2><i class="fas fa-envelope"></i> Email Us</h2>
+          <p>Send your messages directly to our team:</p>
+          <p><strong>info@avengersgallery.com</strong></p>
+          <p>For press inquiries: <strong>press@avengersgallery.com</strong></p>
+        </div>
+        
+        <div class="contact-card">
+          <h2><i class="fas fa-phone-alt"></i> Call Us</h2>
+          <p>Available Monday-Friday, 9AM-5PM EST</p>
+          <p><strong>011-526-9856</strong>
+          <p>Emergency contact (site issues): <strong>011-895-6347</strong>
+        </div>
+        
+        <div class="contact-card">
+          <h2><i class="fas fa-map-marker-alt"></i> Visit Us</h2>
+          <p>Avengers Gallery Headquarters</p>
+          <p>200 Park Avenue</p>
+          <p>New Town Junction (JHB)</p>
+          <p>(By appointment only)</p>
+        </div>
+        
+        <div class="contact-card">
+          <h2><i class="fas fa-paper-plane"></i> Contact Form</h2>
+          <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="text" placeholder="Subject">
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="submit-btn">Send Message</button>
+          </form>
+        </div>
+        
+        <div class="contact-card">
+          <h2><i class="fas fa-hashtag"></i> Social Media</h2>
+          <p>Connect with us across the multiverse:</p>
+          <div class="social-links">
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+          </div>
+        </div>
+        
+        <div class="contact-card">
+          <h2><i class="fas fa-question-circle"></i> Support</h2>
+          <p>Need help with the gallery?</p>
+          <p>Check our <a href="#" style="color: #00ffff;">FAQ</a> first</p>
+          <p>Or open a <a href="#" style="color: #00ffff;">support ticket</a></p>
+          <p>Average response time: 24 hours</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

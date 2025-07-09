@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marvel Avengers Gallery</title>
+    <style>
+      body {
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        color: white;
+        min-height: 100vh;
+      }
+
+      #menu-bar {
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(10px);
+        padding: 15px 0;
+        text-align: center;
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      #menu-bar a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 25px;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        position: relative;
+        transition: all 0.3s ease;
+      }
+
+      #menu-bar a:hover {
+        color: #00ffff;
+        text-shadow: 0 0 10px #00ffff;
+      }
+
+      #menu-bar a::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        background: linear-gradient(90deg, #00ffff, #0088ff);
+        transition: width 0.3s ease;
+      }
+
+      #menu-bar a:hover::after {
+        width: 100%;
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding: 0;
+        margin: 0;
+      }
+
+      .gallery a {
+        display: block;
+        overflow: hidden;
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+      }
+
+      .gallery img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .gallery a:hover {
+        transform: none;
+        box-shadow: none;
+      }
+
+      .gallery a:hover img {
+        transform: scale(1.1);
+      }
+
+      .gallery a::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.7) 0%,
+          rgba(0, 0, 0, 0) 30%
+        );
+        z-index: 1;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .gallery a:hover::before {
+        opacity: 1;
+      }
+
+      /* Fallback for images that don't load */
+      .gallery a::after {
+        content: attr(alt);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 1.5rem;
+        text-align: center;
+        z-index: 0;
+      }
+
+      @media (max-width: 768px) {
+        #menu-bar a {
+          margin: 0 10px;
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="menu-bar">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="gallery">
+      <a href="avenger-1.html"
+        ><img src="images/avengers_01.jpg" alt="Avenger 1"
+      /></a>
+      <a href="avenger-2.html"
+        ><img src="images/avengers_02.jpg" alt="Avenger 2"
+      /></a>
+      <a href="avenger-3.html"
+        ><img src="images/avengers_03.jpg" alt="Avenger 3"
+      /></a>
+      <a href="avenger-4.html"
+        ><img src="images/avengers_04.jpg" alt="Avenger 4"
+      /></a>
+      <a href="avenger-5.html"
+        ><img src="images/avengers_05.jpg" alt="Avenger 5"
+      /></a>
+      <a href="avenger-6.html"
+        ><img src="images/avengers_06.jpg" alt="Avenger 6"
+      /></a>
+    </div>
+
+    <script>
+      // Debugging script to help identify images loading issues//
+      document.addEventListener("DOMContentLoaded", function () {
+        const images = document.querySelectorAll(".gallery img");
+        images.forEach((img) => {
+          img.onerror = function () {
+            console.error("Failed to load image:", this.src);
+            this.style.border = "2px solid red";
+          };
+        });
+      });
+    </script>
+  </body>
+</html>

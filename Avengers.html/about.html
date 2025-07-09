@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - Marvel Avengers Gallery</title>
+    <style>
+      body {
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        color: white;
+        min-height: 100vh;
+      }
+
+      #menu-bar {
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(10px);
+        padding: 15px 0;
+        text-align: center;
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      #menu-bar a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 25px;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        position: relative;
+        transition: all 0.3s ease;
+      }
+
+      #menu-bar a:hover {
+        color: #00ffff;
+        text-shadow: 0 0 10px #00ffff;
+      }
+
+      #menu-bar a::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        background: linear-gradient(90deg, #00ffff, #0088ff);
+        transition: width 0.3s ease;
+      }
+
+      #menu-bar a:hover::after {
+        width: 100%;
+      }
+
+      .about-container {
+        max-width: 1000px;
+        margin: 50px auto;
+        padding: 30px;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 15px;
+        box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+        backdrop-filter: blur(5px);
+      }
+
+      h1 {
+        text-align: center;
+        color: #00ffff;
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+      }
+
+      h2 {
+        color: #00ffff;
+        border-bottom: 2px solid #0088ff;
+        padding-bottom: 10px;
+        margin-top: 30px;
+      }
+
+      p {
+        line-height: 1.6;
+        font-size: 1.1rem;
+      }
+
+      .team-members {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+      }
+
+      .member {
+        background: rgba(15, 32, 39, 0.7);
+        padding: 20px;
+        border-radius: 10px;
+        border-left: 3px solid #00ffff;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .member:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+      }
+
+      .member h3 {
+        color: #00ffff;
+        margin-top: 0;
+      }
+
+      .mission-statement {
+        font-style: italic;
+        background: rgba(0, 136, 255, 0.1);
+        padding: 20px;
+        border-radius: 10px;
+        border-left: 3px solid #0088ff;
+      }
+
+      @media (max-width: 768px) {
+        #menu-bar a {
+          margin: 0 10px;
+          font-size: 14px;
+        }
+        
+        .about-container {
+          margin: 20px;
+          padding: 20px;
+        }
+        
+        h1 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="menu-bar">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    
+    <div class="about-container">
+      <h1>About The Avengers Gallery</h1>
+      
+      <div class="mission-statement">
+        <p>"To assemble Earth's Mightiest Heroes and showcase their legacy through stunning visual storytelling, inspiring fans across the universe."</p>
+      </div>
+      
+      <h2>Our Story</h2>
+      <p>Founded in 2023, the Marvel Avengers Gallery was created by a group of dedicated fans who wanted to celebrate the rich history of Earth's Mightiest Heroes. What began as a small collection of images has grown into a comprehensive visual archive of the Avengers' most iconic moments.</p>
+      
+      <h2>The Collection</h2>
+      <p>Our gallery features high-resolution images of all your favorite Avengers, from the original founding members to the newest recruits. Each image is carefully selected to represent key moments in Avengers history, from battles against Thanos to team-ups with the Guardians of the Galaxy.</p>
+      
+      <h2>Meet The Team</h2>
+      <div class="team-members">
+        <div class="member">
+          <h3>Tony Stark</h3>
+          <p>Founder & Creative Director</p>
+          <p>"Sometimes you gotta run before you can walk."</p>
+        </div>
+        
+        <div class="member">
+          <h3>Steve Rogers</h3>
+          <p>Head of Content</p>
+          <p>"I can do this all day."</p>
+        </div>
+        
+        <div class="member">
+          <h3>Natasha Romanoff</h3>
+          <p>Security Specialist</p>
+          <p>"I'm always picking up after you boys."</p>
+        </div>
+        
+        <div class="member">
+          <h3>Bruce Banner</h3>
+          <p>Technical Director</p>
+          <p>"That's my secret, Captain. I'm always angry."</p>
+        </div>
+      </div>
+      
+      <h2>Our Mission</h2>
+      <p>We believe in the power of the Avengers to inspire people to be their best selves. Through this gallery, we aim to preserve the legacy of these heroes and share their stories with future generations. Whether you're a lifelong fan or just discovering the Marvel Universe, we hope our collection brings you joy and inspiration.</p>
+    </div>
+  </body>
+</html>

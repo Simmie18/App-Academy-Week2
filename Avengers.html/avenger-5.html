@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CAPTAIN AMERICA | FIRST AVENGER</title>
+    <style>
+      
+      body {
+        background: linear-gradient(135deg, #0a0a3a, #000066, #0a0a3a);
+        font-family: "Arial", sans-serif;
+        color: #fff;
+        margin: 0;
+        padding: 20px;
+        min-height: 100vh;
+        text-align: center;
+        position: relative;
+        overflow-x: hidden;
+      }
+
+      body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 30%;
+        height: 100%;
+        background: repeating-linear-gradient(
+          0deg,
+          transparent,
+          transparent 15px,
+          rgba(255, 0, 0, 0.1) 15px,
+          rgba(255, 0, 0, 0.1) 30px
+        );
+        z-index: -1;
+      }
+
+      
+      h2 {
+        font-size: 3.5rem;
+        margin: 20px 0;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        position: relative;
+        text-shadow: 2px 2px 0 #003366, -2px -2px 0 #cc0000;
+        animation: shieldPulse 3s infinite alternate;
+      }
+
+      @keyframes shieldPulse {
+        from {
+          transform: scale(1);
+        }
+        to {
+          transform: scale(1.02);
+        }
+      }
+
+      h2::after {
+        content: "★";
+        color: #fff;
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.5rem;
+        text-shadow: 0 0 10px #fff;
+      }
+
+     
+      .gallery {
+        max-width: 300px;
+        margin: 30px auto;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 0 0 0 5px #cc0000, 0 0 0 10px #fff, 0 0 0 15px #003366,
+          0 0 30px rgba(0, 51, 102, 0.7);
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      .gallery:hover {
+        transform: scale(1.05) rotate(5deg);
+        box-shadow: 0 0 0 5px #cc0000, 0 0 0 10px #fff, 0 0 0 15px #003366,
+          0 0 50px rgba(0, 51, 102, 0.9);
+      }
+
+      .gallery img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.3s ease;
+      }
+
+      .gallery:hover img {
+        transform: scale(1.1);
+      }
+
+      
+      h4 {
+        font-size: 1.8rem;
+        color: #fff;
+        margin: 25px 0 15px;
+        position: relative;
+        display: inline-block;
+        padding: 0 20px;
+      }
+
+      h4::before,
+      h4::after {
+        content: "✪";
+        color: #cc0000;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      h4::before {
+        left: 0;
+      }
+
+      h4::after {
+        right: 0;
+      }
+
+    
+      p {
+        margin: 12px auto;
+        max-width: 500px;
+        text-align: left;
+        padding: 10px 20px;
+        background: rgba(0, 51, 102, 0.7);
+        border-radius: 5px;
+        position: relative;
+        border-left: 5px solid #cc0000;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+      }
+
+      p b {
+        display: inline-block;
+        width: 150px;
+        color: #fff;
+      }
+
+      
+      p:contains("100%") {
+        background: rgba(204, 0, 0, 0.2);
+        border-left: 5px solid #fff;
+        animation: starPulse 2s infinite alternate;
+      }
+
+      @keyframes starPulse {
+        from {
+          box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+        }
+        to {
+          box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+        }
+      }
+
+      
+      p:contains("(leadership)")::before {
+        content: "🛡️";
+        margin-right: 8px;
+      }
+
+    
+      @media (max-width: 600px) {
+        h2 {
+          font-size: 2.5rem;
+        }
+        .gallery {
+          max-width: 250px;
+        }
+        p {
+          max-width: 90%;
+        }
+        p b {
+          width: 120px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Captain America</h2>
+    <div class="gallery">
+      <a href="index.html">
+        <img src="images/avengers_05.jpg" alt="Captain America - The First Avenger">
+    </div>
+
+    <h4>Bio</h4>
+    <p><b>Name:</b> Steve Rogers</p>
+    <p><b>Place Of Birth:</b> Brooklyn, New York</p>
+    <p><b>Alignment:</b> Good</p>
+    <p><b>Gender:</b> Male</p>
+    <p><b>Race:</b> Enhanced Human</p>
+
+    <br />
+
+    <h4>Power Stats</h4>
+    <p><b>Intelligence:</b> 80%</p>
+    <p><b>Strength:</b> 90% (peak human+)</p>
+    <p><b>Speed:</b> 75% (enhanced reflexes)</p>
+    <p><b>Durability:</b> 85% (rapid healing)</p>
+    <p><b>Power:</b> 70% (via shield/leadership)</p>
+    <p><b>Combat:</b> 100% (master tactician)</p>
+  </body>
+</html>
